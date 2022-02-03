@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+html, body {
+  overflow: hidden;
+}
+body {
+  background-color: #bbd1ea;
+  font-family: 'Oswald', sans-serif;
+}
+.wrapper {
+  width: 750px;
+  height: 560px;
+  margin: -280px 0 0 -375px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+.content::after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.face {
+  width: 60px;
+  height: 60px;
+  margin: 35px auto 15px;
+}
+.human, .machine {
+  float: left;
+  width: 50%;
+  line-height: 1.5;
+}
+.human .io, .machine .io {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 10px 30px 20px;
+  height: 450px;
+  display: block;
+  outline: none;
+  overflow-y: scroll;
+  margin: 0 10px;
+  -webkit-mask: -webkit-linear-gradient(top, transparent 0px, black 30px, black 50%, transparent 100%), 
+  -webkit-linear-gradient(bottom, transparent 0px, black 30px, black 50%, transparent 100%);
+  mask: inherit;
+}
+.human .io::-webkit-scrollbar, .machine .io::-webkit-scrollbar {
+  width: 5px;
+}
+.human .io::-webkit-scrollbar-thumb, .machine .io::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+}
+.human:after, .machine:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.human {
+  background-color: #fff;
+  color: rgba(34, 48, 74);;
+  font-size: 15px;
+  border-radius: 10px 0 0 10px;
+}
+.human .face svg {
+  width: 44px;
+  height: 40px;
+  position: relative;
+  left: 8px;
+  top: 8px;
+}
+.human .face svg .f {
+  stroke: #ccc;
+  stroke-width: 3px;
+  fill: none;
+}
+.human .face svg .eye, .human .face svg .mouth, .human .face svg .smile {
+  fill: #ccc;
+}
+.human .face.active .smile {
+  display: none;
+}
+.human .face.active .f {
+  stroke: #666;
+}
+.human .face.active .eye, .human .face.active .mouth {
+  fill: #666;
+}
+.human .io::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.machine {
+  background-color: #1a1a1a;
+  color: #00FF99;
+  border-radius: 0 10px 10px 0;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.7), 0 0 10px rgba(0, 255, 153, 0.5);
+}
+.machine .face svg {
+  width: 54px;
+  height: 57px;
+  position: relative;
+  left: 2px;
+  top: 1px;
+}
+.machine .face svg .f, .machine .face svg .e, .machine .face svg .eye {
+  stroke: #666;
+  stroke-width: 3px;
+}
+.machine .face svg .s {
+  fill: #666;
+}
+.machine .face svg .signal {
+  fill: rgba(0, 255, 153, 0.2);
+}
+.machine .face.active .signal {
+  fill: #00ff99;
+}
+.machine .face.active .f, .machine .face.active .e, .machine .face.active .eye {
+  stroke: #999;
+}
+.machine .face.active .s {
+  fill: #999;
+}
+.machine .io {
+  font-size: 13px;
+}
+.machine .io::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15);
+}
